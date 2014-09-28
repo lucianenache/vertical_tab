@@ -1,11 +1,88 @@
-*{
-  background: #CFCFCF;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
   
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #CFCFCF;
+  text-color: #45454e;
   /* palette
       text: #45454e;
       tabs: #fff;
       gray: #727373;
   
   */
-  
 }
+
+.content {
+  top: 0px;
+  left: 92px;
+  position: absolute;
+  float: left;
+  display: inline-block;
+  width:  50%;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+   background: white;
+}
+
+
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+    .tabs {
+      position: relative;   
+      /*min-height: 200px; /* This part sucks */
+      clear: both;
+      margin: 25px 0;      
+    }
+    .tab {
+      /*float: left; */     
+       height: 41px; 
+       
+    }
+    .tab label {
+      background:#fff; 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      margin-left: -1px; 
+      position: relative;
+      left: 1px;        
+      width: 70px;
+      display: block;
+    }
+    .tab [type=radio] {
+      display: none;   
+    }
+
+/*
+    .content {
+      
+      
+     
+      right: 0;
+      bottom: 0;
+      padding: 20px 0 0 0;
+      border: 1px solid #ccc;       
+    }
+*/
+    [type=radio]:checked ~ label {
+      background:#727373;
+      border-bottom: 1px solid white;
+      gz-index: 2;
+    }
+    [type=radio]:checked ~ label ~ .content {
+
+      z-index: 1;
+    }
